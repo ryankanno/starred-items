@@ -9,7 +9,7 @@ import csv
 
 from libgreader import GoogleReader
 from libgreader import ClientAuthMethod
-from libgreader import Feed 
+from libgreader import Feed
 from libgreader import ReaderUrl
 from libgreader import SpecialFeed
 
@@ -21,7 +21,7 @@ LOG_LEVEL = logging.DEBUG
 LOG_FORMAT = '%(asctime)s %(levelname)s %(message)s'
 
 
-# TODO: add config file (ryankanno) <Sun Feb 10 08:05:33 2013> 
+# TODO: add config file (ryankanno) <Sun Feb 10 08:05:33 2013>
 def init_argparser():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('-u', '--username', help='Google username')
@@ -52,21 +52,26 @@ def get_reader(username, password):
 
 
 def get_starred_feed_contents(reader, feed, continuation=None, num_items=1000):
-    return reader.getFeedContent(feed, False, continuation, num_items, None, None)
+    return reader.getFeedContent(feed,
+                                 False,
+                                 continuation,
+                                 num_items,
+                                 None,
+                                 None)
 
 
 def get_feed_items(feed_contents):
     items = []
-    if feed_contents and 'items' in feed_contents: 
-        items = feed_contents['items'] 
+    if feed_contents and 'items' in feed_contents:
+        items = feed_contents['items']
     return items
 
 
 def get_continuation_hash(feed_contents):
     continuation = None
-    if feed_contents and 'continuation' in feed_contents: 
-        continuation = feed_contents['continuation'] 
-    return continuation 
+    if feed_contents and 'continuation' in feed_contents:
+        continuation = feed_contents['continuation']
+    return continuation
 
 
 def get_starred_items(args):
@@ -83,7 +88,8 @@ def get_starred_items(args):
             for item in get_feed_items(feed_contents):
                 writer.writerow(get_feed_item_contents(item))
 
-            feed_contents = get_starred_feed_contents(reader, feed, continuation)
+            feed_contents = get_starred_feed_contents(
+                reader, feed, continuation)
             continuation = get_continuation_hash(feed_contents)
 
         # Last set of items to write (this sucks, just fyi)
