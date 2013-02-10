@@ -4,7 +4,7 @@ and hopefully, can improve yours too!
 Workflow
 ========
 
-Currently, I use (IFTTT)[http://ifttt.com] to send my starred items in Google 
+Currently, I use [IFTTT](http://ifttt.com) to send my starred items in Google 
 Reader over to Pocket.  First, I needed a way to retrieve all my old items 
 out of Google Reader and into Pocket.  Second, I needed a way to remove these 
 starred items in Google Reader once I've actioned them in Pocket.  
@@ -13,7 +13,7 @@ The reason for the second workflow is because if Pocket ever does get out of
 sync, you don't want it to resynchronize items you've already actioned.  Trust
 me, it happens - and it stinks. :)
 
-For example, I send items over to (https://pinboard.in/u:ryankanno/)[https://pinboard.in/u:ryankanno/] 
+For example, I send items over to [https://pinboard.in/u:ryankanno/](https://pinboard.in/u:ryankanno/) 
 from Pocket - once I've deleted the item from Pocket, I need to ultimately 
 remove the same item from my starred feed in Google.
 
