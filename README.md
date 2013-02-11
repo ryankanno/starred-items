@@ -15,14 +15,12 @@ I needed a way to retrieve all my old items out of Google Reader and send them
 to Pocket. Once in Pocket, I need a way to remove these starred items in 
 Google Reader once I've actioned them in Pocket.  
 
-The reason for the second workflow is two-fold. If Pocket ever does get out of
-sync, you don't want it to resynchronize items you've already actioned. Trust
-me, it happens - and it stinks. :)  Second, you want (or at least I do) to 
-have a clean Google Reader starred items list.
+In Pocket, I typically send items over to [https://pinboard.in/u:ryankanno/](https://pinboard.in/u:ryankanno/)
+to permanently archive all my personal favs. Once the item has been deleted 
+from Pocket, I need to ultimately remove the same item from my starred feed in Google.
 
-Once in Pocket, I typically send items over to [https://pinboard.in/u:ryankanno/](https://pinboard.in/u:ryankanno/) 
-- once I've deleted the item from Pocket, I need to ultimately remove the 
-same item from my starred feed in Google.
+I know the reason for the second workflow is subjective. I just want to have a 
+clean Google Reader starred items list. I guess I'm OCD like that. :D
 
 
 retro_starred_items.py
