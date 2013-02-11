@@ -34,6 +34,10 @@ items over to Pocket.
 pocket-to-reader-sync
 =====================
 
-This will be a Flask site to periodically query Pocket's API to determine 
+This will be a Flask site w/ CeleryD to periodically query Pocket's API to determine 
 what's changed since the previous sync.  Ideally, we'll action the deleted 
-items by removing them from the Google Reader starred items.
+items by removing them from the Google Reader starred items list.
+
+* Flask (to allow signups)
+* Celery (to schedule syncs)
+* MongoDB (to save your starred items)
