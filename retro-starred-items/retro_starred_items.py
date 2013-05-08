@@ -24,13 +24,13 @@ LOG_FORMAT = '%(asctime)s %(levelname)s %(message)s'
 # TODO: add config file (ryankanno) <Sun Feb 10 08:05:33 2013>
 def init_argparser():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('-u', '--username', help='Google username', 
+    parser.add_argument('-u', '--username', help='Google username',
                         required=True)
-    parser.add_argument('-p', '--password', help='Google password', 
+    parser.add_argument('-p', '--password', help='Google password',
                         required=True)
-    parser.add_argument('-f', '--csv_file', help='Name of starred items file', 
+    parser.add_argument('-f', '--csv_file', help='Name of starred items file',
                         default="starred_items.csv")
-    parser.add_argument('-v', '--verbose', action='store_true', 
+    parser.add_argument('-v', '--verbose', action='store_true',
                         help='increase chattiness of script')
     return parser
 
@@ -66,11 +66,13 @@ def get_starred_feed_contents(reader, feed, continuation=None, num_items=1000):
 
 
 def get_feed_items(feed_contents):
-    return feed_contents['items'] if feed_contents and 'items' in feed_contents else []
+    return feed_contents['items'] \
+        if feed_contents and 'items' in feed_contents else []
 
 
 def get_continuation_hash(feed_contents):
-    return feed_contents['continuation'] if feed_contents and 'continuation' in feed_contents else None
+    return feed_contents['continuation'] \
+        if feed_contents and 'continuation' in feed_contents else None
 
 
 def get_starred_items(args):
